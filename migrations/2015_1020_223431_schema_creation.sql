@@ -1,3 +1,5 @@
+# Written by Arthur Verkaik
+
 # Users table
 CREATE TABLE Users (
   userID uuid PRIMARY KEY,
