@@ -1,5 +1,4 @@
 # Written by Arthur Verkaik
-#
 
 # Users table population
 INSERT INTO Users VALUES ('1884087f-bb5f-43d9-9d53-794ec3a7c0ae', 'arthur', 'arthur@mail.com', 'Arthur', 'Verkaik', '$pbkdf2-sha256$2000$7T2n1Pp/jxGiFCJkTOm9Nw$08SpbelApLbaf3rPWqPN9Lda6pTk4JWfh3rTR1otq.4');
