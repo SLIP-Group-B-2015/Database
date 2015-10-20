@@ -1,13 +1,13 @@
 CREATE EXTENSION "uuid-ossp";
 CREATE EXTENSION "pgcrypto";
 
-CREATE TABLE users (
+CREATE TABLE Users (
   userID uuid PRIMARY KEY,
   username varchar(12) NOT NULL,
   email varchar(50) NOT NULL,
   firstName varchar(30) NOT NULL,
   lastName varchar(30) NOT NULL,
-  password varchar(50) NOT NULL
+  password varchar(100) NOT NULL
 );
 
 INSERT INTO users VALUES ('1884087f-bb5f-43d9-9d53-794ec3a7c0ae', 'arthur', 'arthur@mail.com', 'Arthur', 'Verkaik', crypt('password', gen_salt('md5')));
@@ -16,7 +16,7 @@ INSERT INTO users VALUES ('11766785-7f86-4b93-9821-1ed79aed41f1', 'rikki', 'rikk
 INSERT INTO users VALUES ('0f7763e8-2d4b-44dd-b9a5-5bf653c1cf50', 'iman', 'iman@mail.com', 'Iman', 'Majumdar', crypt('password', gen_salt('md5')));
 INSERT INTO users VALUES ('f0c58b7d-6a9d-428f-9e58-bfff6e5f3d82', 'jamie', 'jamie@mail.com', 'Jamie', 'McCracken', crypt('password', gen_salt('md5')));
 
-CREATE TABLE raspberries (
+CREATE TABLE Raspberries (
   raspberryID uuid PRIMARY KEY,
   userID uuid REFERENCES users(userID)
 );
@@ -27,9 +27,9 @@ INSERT INTO raspberries VALUES ('3d7555c3-3e76-4950-a6ca-a5a0588ba0d3', '1176678
 INSERT INTO raspberries VALUES ('e2fedebe-2825-4886-ba97-25d569a83b18', '0f7763e8-2d4b-44dd-b9a5-5bf653c1cf50');
 INSERT INTO raspberries VALUES ('a4a23f9e-07bb-4c7f-98a0-88ad30dc819e', 'f0c58b7d-6a9d-428f-9e58-bfff6e5f3d82');
 
-CREATE TABLE events (
+CREATE TABLE Events (
   raspberryID uuid REFERENCES raspberries(raspberryID),
-  eventID varchar(6) NOT NULL,
+  eventID varchar(10) NOT NULL,
   eventTime timestamp DEFAULT current_timestamp,
   description text,
   PRIMARY KEY(raspberryID,eventID,eventTime)
