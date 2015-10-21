@@ -3,8 +3,8 @@
 -- Users table
 CREATE TABLE Users (
   userID uuid PRIMARY KEY,
-  username varchar(12) NOT NULL,
-  email varchar(50) NOT NULL,
+  username varchar(12) NOT NULL UNIQUE,
+  email varchar(50) NOT NULL UNIQUE,
   firstName varchar(30) NOT NULL,
   lastName varchar(30) NOT NULL,
   password varchar(100) NOT NULL
