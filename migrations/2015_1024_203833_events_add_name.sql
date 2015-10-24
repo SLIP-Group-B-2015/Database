@@ -4,3 +4,4 @@
 
 ALTER TABLE Events ADD COLUMN name varchar(50);
 ALTER TABLE Events RENAME COLUMN description TO note;
+ALTER TABLE Events RENAME COLUMN eventid TO eventtype;
