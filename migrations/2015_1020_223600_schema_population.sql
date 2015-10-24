@@ -15,8 +15,8 @@ INSERT INTO Raspberries VALUES ('e2fedebe-2825-4886-ba97-25d569a83b18', '0f7763e
 INSERT INTO Raspberries VALUES ('a4a23f9e-07bb-4c7f-98a0-88ad30dc819e', 'f0c58b7d-6a9d-428f-9e58-bfff6e5f3d82');
 
 -- Events table population
-INSERT INTO Events VALUES ('c4ed2373-df65-4c89-bf2e-f45775d9d1bb', 'knock', current_timestamp, null);
-INSERT INTO Events VALUES ('8269ed16-7fc0-4328-a6f1-dacbfa18f26d', 'mail', current_timestamp, null);
-INSERT INTO Events VALUES ('3d7555c3-3e76-4950-a6ca-a5a0588ba0d3', 'knock', current_timestamp, 'test description 1');
-INSERT INTO Events VALUES ('e2fedebe-2825-4886-ba97-25d569a83b18', 'mail', current_timestamp, 'test description 2');
-INSERT INTO Events VALUES ('a4a23f9e-07bb-4c7f-98a0-88ad30dc819e', 'knock', current_timestamp, 'marshall is dumb');
+INSERT INTO Events VALUES ('c4ed2373-df65-4c89-bf2e-f45775d9d1bb', 'KNOCK', current_timestamp, null);
+INSERT INTO Events VALUES ('8269ed16-7fc0-4328-a6f1-dacbfa18f26d', 'MAIL', current_timestamp, null);
+INSERT INTO Events VALUES ('3d7555c3-3e76-4950-a6ca-a5a0588ba0d3', 'KNOCK', current_timestamp, 'test description 1');
+INSERT INTO Events VALUES ('e2fedebe-2825-4886-ba97-25d569a83b18', 'MAIL', current_timestamp, 'test description 2');
+INSERT INTO Events VALUES ('a4a23f9e-07bb-4c7f-98a0-88ad30dc819e', 'KNOCK', current_timestamp, 'marshall is dumb');
