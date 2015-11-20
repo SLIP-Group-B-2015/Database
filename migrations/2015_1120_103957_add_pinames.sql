@@ -7,4 +7,4 @@
 
 ALTER TABLE Raspberries DROP CONSTRAINT raspberries_pkey CASCADE;
 ALTER TABLE Raspberries ADD PRIMARY KEY (raspberryID, userID);
-ALTER TABLE Raspberries ADD COLUMN name varchar(30);
+ALTER TABLE Raspberries ADD COLUMN raspberryName varchar(30);
