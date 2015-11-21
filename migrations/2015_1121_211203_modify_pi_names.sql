@@ -16,16 +16,17 @@
 ALTER TABLE Raspberries DROP COLUMN raspberryName;
 
 -- Table for the pi names.
-CREATE TABLE RaspberryNames (
+CREATE TABLE Raspberry_names (
   raspberryID uuid PRIMARY KEY,
   raspberryName varchar(30)
 );
 
-INSERT INTO RaspberryNames VALUES ('c4ed2373-df65-4c89-bf2e-f45775d9d1bb', 'Arthur is the best right now');
-INSERT INTO RaspberryNames VALUES ('8269ed16-7fc0-4328-a6f1-dacbfa18f26d', 'Marshall is the worst');
-INSERT INTO RaspberryNames VALUES ('3d7555c3-3e76-4950-a6ca-a5a0588ba0d3', 'Rikki');
-INSERT INTO RaspberryNames VALUES ('e2fedebe-2825-4886-ba97-25d569a83b18', 'Iman raspberry');
-INSERT INTO RaspberryNames VALUES ('a4a23f9e-07bb-4c7f-98a0-88ad30dc819e', 'Jamie');
+INSERT INTO Raspberry_names VALUES ('c4ed2373-df65-4c89-bf2e-f45775d9d1bb', 'Arthur is the best right now');
+INSERT INTO Raspberry_names VALUES ('8269ed16-7fc0-4328-a6f1-dacbfa18f26d', 'Marshall is the worst');
+INSERT INTO Raspberry_names VALUES ('3d7555c3-3e76-4950-a6ca-a5a0588ba0d3', 'Rikki');
+INSERT INTO Raspberry_names VALUES ('e2fedebe-2825-4886-ba97-25d569a83b18', 'Iman raspberry');
+INSERT INTO Raspberry_names VALUES ('a4a23f9e-07bb-4c7f-98a0-88ad30dc819e', 'Jamie');
 
 
-ALTER TABLE Events ADD FOREIGN KEY(raspberryID) REFERENCES RaspberryNames(raspberryID);
+ALTER TABLE Events ADD FOREIGN KEY(raspberryID) REFERENCES Raspberry_names(raspberryID);
+ALTER TABLE Raspberries ADD FOREIGN KEY(raspberryID) REFERENCES Raspberry_names(raspberryID);
