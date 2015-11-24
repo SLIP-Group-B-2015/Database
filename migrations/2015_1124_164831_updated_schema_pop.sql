@@ -18,6 +18,7 @@ INSERT INTO Raspberries VALUES ('3d7555c3-3e76-4950-a6ca-a5a0588ba0d3');
 INSERT INTO Raspberries VALUES ('e2fedebe-2825-4886-ba97-25d569a83b18');
 INSERT INTO Raspberries VALUES ('a4a23f9e-07bb-4c7f-98a0-88ad30dc819e');
 INSERT INTO Raspberries VALUES ('967d75f3-f929-48ea-a1dd-3fe7dd7140bd');
+INSERT INTO Raspberries VALUES ('32479b62-b8cf-409a-8476-01b8c352d255');
 
 -- Connections - add one pi per user.
 INSERT INTO Connections VALUES('c4ed2373-df65-4c89-bf2e-f45775d9d1bb', '1884087f-bb5f-43d9-9d53-794ec3a7c0ae', 'Home');
